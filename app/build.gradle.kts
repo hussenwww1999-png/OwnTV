@@ -1,6 +1,18 @@
 import java.io.ByteArrayOutputStream
+import java.io.File
 import java.util.Properties
 import javax.inject.Inject
+import org.gradle.api.DefaultTask
+import org.gradle.api.GradleException
+import org.gradle.api.file.ConfigurableFileCollection
+import org.gradle.api.file.DirectoryProperty
+import org.gradle.api.file.RegularFileProperty
+import org.gradle.api.tasks.InputFiles
+import org.gradle.api.tasks.Internal
+import org.gradle.api.tasks.OutputFile
+import org.gradle.api.tasks.PathSensitive
+import org.gradle.api.tasks.PathSensitivity
+import org.gradle.api.tasks.TaskAction
 import org.gradle.process.ExecOperations
 
 // Packaged locale qualifiers are read from tools/i18n/locales.json entries where packaged = true.
@@ -430,7 +442,6 @@ dependencies {
     implementation(platform(libs.koin.bom))
     implementation(libs.koin.android)
     implementation(libs.koin.androidx.compose)
-
 
     // Debug tooling
     debugImplementation(libs.androidx.compose.ui.tooling)
