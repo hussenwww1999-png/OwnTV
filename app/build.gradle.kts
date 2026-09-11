@@ -30,7 +30,7 @@ plugins {
 }
 
 android {
-    namespace = "tv.own.owntv"
+    namespace = "tv.niyati.app"
     compileSdk {
         version = release(37)
     }
@@ -44,7 +44,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "tv.own.owntv"
+        applicationId = "tv.niyati.app"
         minSdk = 26
         targetSdk = 36
         // CI injects these from the git tag (see .github/workflows/android.yml) so releases never
